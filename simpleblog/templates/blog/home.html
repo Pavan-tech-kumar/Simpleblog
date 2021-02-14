@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<div class="col-sm-9">
+    <h3 class="text-white my-5">Home Page</h3>
+    {% for post in posts %}
+    <div class="card" style="width: auto;">
+      <div class="card-body">
+        <h5 class="card-title" style="color:black;text-align: center;">{{ post.title }}</h5>
+        <p class="card-text" style="color: black;">{{ post.desc }}</p>
+      </div>
+    </div><br>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}
